@@ -5,7 +5,7 @@
 - `git init`: Git 저장소 초기화
 - `.git` 파일 생성
 
-![git init](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/247730f6-913b-469a-9d52-f33505e45627/image.png)
+
 
 - `git add .`: 파일들 업로드 대기
 - `git commit -m "message"`: 저장
@@ -43,7 +43,7 @@
 - `git add`: 변경 사항을 인덱스에 추가
 - `git commit`: 인덱스에 추가된 내용을 커밋하여 기록으로 저장
 
-![Git 작업 디렉토리](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/110d7803-9359-413d-997a-82cf5587e024/image.png)
+
 
 ---
 
@@ -61,7 +61,7 @@
 - `git log`: 커밋 로그 확인
   - 각 커밋의 해시값을 통해 이전 커밋으로 돌아갈 수 있다.
 
-![Git log](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/00012af9-942b-4a6c-a7d4-a3631efd9798/image.png)
+
 
 ---
 
@@ -70,7 +70,7 @@
 - `git reflog`: 이전의 모든 커밋 기록을 확인할 수 있다.
   - 복구가 가능하며, 특정 커밋으로 돌아갈 수 있다.
 
-![Git reflog](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/eaa22442-4a62-4bb1-a607-004b562c47b1/image.png)
+
 
 ---
 
