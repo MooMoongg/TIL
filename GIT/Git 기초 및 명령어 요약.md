@@ -1,0 +1,80 @@
+## Git 기초 및 명령어 요약
+
+### 1. Git 초기화 및 설정
+
+- `git init`: Git 저장소 초기화
+- `.git` 파일 생성
+
+![git init](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/247730f6-913b-469a-9d52-f33505e45627/image.png)
+
+- `git add .`: 파일들 업로드 대기
+- `git commit -m "message"`: 저장
+- `git remote add origin https://github.com/MooMoongg/Springboot-JPA-Blog.git`: 깃과 연동
+- `git push origin master`: 깃헙 저장소에 파일 업로드
+
+---
+
+### 2. GitHub 소개
+
+- GitHub은 개발자들의 소스코드를 공유하고 협업할 수 있는 플랫폼이다.
+- Microsoft가 GitHub를 인수한 이유는 "소스코드의 빅데이터" 분석을 위한 전략이었다.
+
+### 3. 버전 관리 시스템 (VCS)
+
+- **VCS**는 파일의 변경 내역을 기록하고 여러 버전을 관리할 수 있게 해주는 시스템이다.
+  - 예: 파일을 덮어쓰면 이전 버전이 사라지지만, VCS를 사용하면 각 버전의 변경 사항을 관리할 수 있다.
+
+### 4. 중앙집중형 버전 관리 시스템 (CVCS)
+
+- 중앙집중형 VCS는 중앙 서버에서 파일을 관리하고 여러 사용자가 이를 수정하고 업데이트한다.
+  - 그러나 파일을 덮어쓰는 경우 충돌이 발생할 수 있다.
+  - 예: A가 파일을 수정하고 업로드한 후, B가 수정된 파일을 받지 않고 덮어쓰면 A가 수정한 내용은 사라진다.
+
+### 5. 분산형 버전 관리 시스템 (DVCS)
+
+- **Git**은 분산형 VCS로, 각 사용자가 로컬에서 파일을 관리하며, 중앙 서버와 동기화할 수 있다.
+  - Git은 로컬에서 변경 사항을 관리하고, 중앙 서버에 push하기 전에 로컬에서 모든 작업을 확인할 수 있다.
+
+---
+
+### 6. Git 원리 (3가지 영역)
+
+- Git은 작업 디렉토리, 인덱스, 커밋된 기록(헤더)로 이루어졌다.
+- `git add`: 변경 사항을 인덱스에 추가
+- `git commit`: 인덱스에 추가된 내용을 커밋하여 기록으로 저장
+
+![Git 작업 디렉토리](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/110d7803-9359-413d-997a-82cf5587e024/image.png)
+
+---
+
+### 7. Git Reset 명령어
+
+- `git reset`: 커밋을 되돌리는 명령어
+  - **soft**: 커밋 로그를 되돌리지만 작업 영역은 그대로
+  - **mixed**: 작업 영역까지 되돌리며 커밋 로그는 유지
+  - **hard**: 커밋, 작업 영역까지 모두 삭제
+
+---
+
+### 8. Git Log 확인
+
+- `git log`: 커밋 로그 확인
+  - 각 커밋의 해시값을 통해 이전 커밋으로 돌아갈 수 있다.
+
+![Git log](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/00012af9-942b-4a6c-a7d4-a3631efd9798/image.png)
+
+---
+
+### 9. Git Reflog
+
+- `git reflog`: 이전의 모든 커밋 기록을 확인할 수 있다.
+  - 복구가 가능하며, 특정 커밋으로 돌아갈 수 있다.
+
+![Git reflog](https://prod-files-secure.s3.us-west-2.amazonaws.com/53fe439d-a4fb-4a08-87dc-f8b900f6364e/eaa22442-4a62-4bb1-a607-004b562c47b1/image.png)
+
+---
+
+### 10. Git Commit 로그 변경
+
+- `git commit --amend`: 마지막 커밋 메시지 변경
+- `git reset --soft 해시값`: 이전 커밋으로 되돌리기
